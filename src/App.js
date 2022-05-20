@@ -10,10 +10,10 @@ const App = () => {
   };
 
   return (
-    <div>
+    <>
       <AddUser onAddUser={addUserHandler} />
-      <UserList userList={userList} />
-    </div>
+      {userList.length > 0 && <UserList userList={userList} />}
+    </>
   );
 };
 
